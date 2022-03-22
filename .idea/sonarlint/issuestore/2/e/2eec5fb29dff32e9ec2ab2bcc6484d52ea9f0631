@@ -1,0 +1,33 @@
+
+G
+java:S3457"%String contains no format specifiers.(®¼£åùÿÿÿÿ8§“€ û/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(®¼£åùÿÿÿÿ8¢øŸû/
+c
+java:S3457"AFormat specifiers should be used instead of string concatenation.(«ÏÄùÿÿÿÿ8Öƒ„ û/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(«ÏÄùÿÿÿÿ8ÖùŸû/
+B
+java:S3457"%String contains no format specifiers.(òè–Æ8ã„ û/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(òè–Æ8ÃÙùŸû/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(÷Ï´Èüÿÿÿÿ8®“€ û/
+^
+java:S3457"AFormat specifiers should be used instead of string concatenation.(ÁñîŠ8Ìƒ™ û/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(ÁñîŠ8¥ƒ û/
+B
+java:S3457"%String contains no format specifiers.(½Ù“É8é û/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(½Ù“É8º¬ˆ û/
+B
+java:S3457#"%String contains no format specifiers.(áéÅÎ8¿ÙùŸû/
+U	java:S106#"9Replace this use of System.out or System.err by a logger.(áéÅÎ8Ÿé û/
+B
+java:S3457("%String contains no format specifiers.(áéÅÎ8¢øŸû/
+U	java:S106("9Replace this use of System.out or System.err by a logger.(áéÅÎ8¦æ’ û/
+B
+java:S3457-"%String contains no format specifiers.(áéÅÎ8ÄùŸû/
+U	java:S106-"9Replace this use of System.out or System.err by a logger.(áéÅÎ8ë— û/
+€
+java:S1192#"cDefine a constant instead of duplicating this literal "No hay segunda nave en estÃ¡ clase" 3 times.(áéÅÎ8˜³ûŸû/
+p
+java:S1104"ZMake desplazamiento a static final constant or non-public and provide accessors if needed.(±ş ¢
+n
+java:S1104"SMake motores a static final constant or non-public and provide accessors if needed.(Ñ¡Ñíúÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÀûŒÖûÿÿÿÿ
