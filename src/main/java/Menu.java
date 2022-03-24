@@ -2,10 +2,18 @@ import spaceShip.*;
 
 import java.util.Scanner;
 
+/***
+ * Esta clase llamará los métodos creados para poder cumplir con el menu que se le imprime al usuario
+ * @author Daniel Mauricio Naranjo Benavides
+ */
 public class Menu {
     Scanner decision = new Scanner(System.in);
     Spaceships naves;
 
+    /***
+     * Método que recopila toda la lógica y procede a ejecutar
+     * @param namePerson Este parametro es para poder añadir en algunos mensajes el nombre de la persona
+     */
     public void MenuOption(String namePerson){
         System.out.println("\nHola "+namePerson+" a continuación le daremos el menu de opciones para que decidas.\n");
         System.out.printf("|****** <MENU DE OPCIONES> ******| \n \n"
@@ -17,61 +25,16 @@ public class Menu {
 
         switch (decisionPerson) {
             case 1 -> {
-                System.out.printf("Has elegido comprar un Vehículo Lanzadera. \n"
-                        + "Ahora elige una de las dos opciones. \n"
-                        + "\n¡¡Recuerda que estas dos opciones tienen diferente propiedades!!\n"
-                        + "\n"
-                        + "1: Falcon 1 \n"
-                        + "2: Falcon 2 \n"
-                        + "\n"
-                        + "Elija Sr/Sra " + namePerson + " Por favor \n");
-                Integer decisionPerson2 = decision.nextInt();
-                naves = new ShuttleVehicle(3500, "Químico Sólido o Propelente Líquido", 2900, 3060, "Químico Sólido o Propelente Líquido", 2400);
-                if (decisionPerson2 == 1) {
-                    naves.Name();
-                    naves.Outburst();
-                    naves.Destiny();
-                } else if (decisionPerson2 == 2) {
-                    naves.TwoName();
-                    naves.OutburstShip2();
-                    naves.DestinyShip2();
-                } else {
-                    System.out.println("Opción no valida");
-                }
+                option1(namePerson);
             }
             case 2 -> {
-                System.out.printf("Has elegido comprar una Nave Espacial No Tripulada \n"
-                        + "Estas son us especificaciones: \n" + "\n");
-                naves = new UnmannedShip(0.2, "", 0, 0, "", 0);
-                naves.Name();
-                naves.Destiny();
-                naves.Outburst();
+                option2();
             }
             case 3 -> {
                 option();
             }
             case 4 -> {
-                System.out.printf("Has elegido comprar una Nave Espacial Tripulado. \n"
-                        + "Ahora elige una de las dos opciones."
-                        + "\n"
-                        + "\n ¡¡Recuerda que estas dos opciones tienen diferente propiedades\n"
-                        + "\n"
-                        + "1: Vital 2.0 \n"
-                        + "2: Vital 2.1 \n \n"
-                        + "Elija Sr/Sra " + namePerson + " Por favor");
-                Integer decisionPerson3 = decision.nextInt();
-                naves = new MannedSpacecraft(0, "", 77, 0, "", 19.8);
-                if (decisionPerson3 == 1) {
-                    naves.Name();
-                    naves.Destiny();
-                    naves.Outburst();
-                } else if (decisionPerson3 == 2) {
-                    naves.TwoName();
-                    naves.DestinyShip2();
-                    naves.OutburstShip2();
-                } else {
-                    System.out.println("Opción no valida");
-                }
+                option4(namePerson);
             }
             default -> {System.out.println("Opción no valida");}
         }
@@ -121,6 +84,63 @@ public class Menu {
                 System.out.println("Opción no valida");
             }
             default -> System.out.println("Opción no valida");
+        }
+    }
+
+    public void option1(String namePerson){
+        System.out.printf("Has elegido comprar un Vehículo Lanzadera. \n"
+                + "Ahora elige una de las dos opciones. \n"
+                + "\n¡¡Recuerda que estas dos opciones tienen diferente propiedades!!\n"
+                + "\n"
+                + "1: Falcon 1 \n"
+                + "2: Falcon 2 \n"
+                + "\n"
+                + "Elija Sr/Sra " + namePerson + " Por favor \n");
+        Integer decisionPerson2 = decision.nextInt();
+        naves = new ShuttleVehicle(3500, "Químico Sólido o Propelente Líquido", 2900, 3060, "Químico Sólido o Propelente Líquido", 2400);
+        if (decisionPerson2 == 1) {
+            naves.Name();
+            naves.Outburst();
+            naves.Destiny();
+        } else if (decisionPerson2 == 2) {
+            naves.TwoName();
+            naves.OutburstShip2();
+            naves.DestinyShip2();
+        } else {
+            System.out.println("Opción no valida");
+        }
+    }
+
+    public void option2(){
+        System.out.printf("Has elegido comprar una Nave Espacial No Tripulada \n"
+                + "Estas son us especificaciones: \n" + "\n");
+        naves = new UnmannedShip(0.2, "", 0, 0, "", 0);
+        naves.Name();
+        naves.Destiny();
+        naves.Outburst();
+    }
+
+    public void option4(String namePerson){
+        System.out.printf("Has elegido comprar una Nave Espacial Tripulado. \n"
+                + "Ahora elige una de las dos opciones."
+                + "\n"
+                + "\n ¡¡Recuerda que estas dos opciones tienen diferente propiedades\n"
+                + "\n"
+                + "1: Vital 2.0 \n"
+                + "2: Vital 2.1 \n \n"
+                + "Elija Sr/Sra " + namePerson + " Por favor\n");
+        Integer decisionPerson3 = decision.nextInt();
+        naves = new MannedSpacecraft(0, "", 77, 0, "", 19.8);
+        if (decisionPerson3 == 1) {
+            naves.Name();
+            naves.Destiny();
+            naves.Outburst();
+        } else if (decisionPerson3 == 2) {
+            naves.TwoName();
+            naves.DestinyShip2();
+            naves.OutburstShip2();
+        } else {
+            System.out.println("Opción no valida");
         }
     }
 }
